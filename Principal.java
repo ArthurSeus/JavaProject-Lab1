@@ -80,11 +80,14 @@ public class Principal {
                         System.out.print("Digite o ano de fundação da loja: ");
                         int ano = input.nextInt();
 
+                        System.out.print("Digite o tamanho do estoque da loja: ");
+                        int tamanhoEstoque = input.nextInt();
+
                         Data dataFundacao = new Data(dia, mes, ano);
                         if(salarioBase != -1.0){
-                            loja = new Loja(nomeLoja, qtdFuncionarios, new Endereco(rua, cidade, estado, pais, cep, numero, complemento), dataFundacao);
+                            loja = new Loja(nomeLoja, qtdFuncionarios, new Endereco(rua, cidade, estado, pais, cep, numero, complemento), dataFundacao, tamanhoEstoque);
                         } else {
-                            loja = new Loja(nomeLoja, qtdFuncionarios, salarioBase, new Endereco(rua, cidade, estado, pais, cep, numero, complemento), dataFundacao);
+                            loja = new Loja(nomeLoja, qtdFuncionarios, salarioBase, new Endereco(rua, cidade, estado, pais, cep, numero, complemento), dataFundacao, tamanhoEstoque);
                         }
                         System.out.println("Loja criada com sucesso!");
                         
